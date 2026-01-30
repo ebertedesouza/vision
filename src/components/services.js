@@ -6,26 +6,45 @@ export function createServices() {
   section.innerHTML = `
     <div class="container">
       <h2>Serviços</h2>
-      <div class="service-cards">
-        <div class="card">
-          <h3>Manutenção Civil</h3>
-          <p>Reformas, reparos e adequações em residências e comércios.</p>
+      <p class="section-subtitle">
+        Soluções completas para residências, comércios e indústrias.
+      </p>
+
+      <div class="service-groups">
+        <div class="group-card">
+          <h3>Construção e Acabamento</h3>
+          <ul>
+            <li>Manutenção civil</li>
+            <li>Drywall</li>
+            <li>Pintura e restauração</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Reparos Hidráulicos</h3>
-          <p>Instalação e conserto de encanamentos, torneiras, vasos sanitários e mais.</p>
+
+        <div class="group-card">
+          <h3>Instalações</h3>
+          <ul>
+            <li>Elétrica</li>
+            <li>Tubulação e hidráulica</li>
+            <li>Vidraçaria</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Serralheria e Portões</h3>
-          <p>Fabricação, instalação e manutenção de portões e estruturas metálicas.</p>
+
+        <div class="group-card">
+          <h3>Estruturas e Portões</h3>
+          <ul>
+            <li>Serralheria</li>
+            <li>Portões automáticos e manuais</li>
+            <li>Reparos e reforços metálicos</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Instalação de Coberturas</h3>
-          <p>Coberturas metálicas, policarbonato e proteção de áreas externas.</p>
-        </div>
-        <div class="card">
-          <h3>Reformas e Adequações</h3>
-          <p>Serviços gerais para deixar qualquer espaço seguro e funcional.</p>
+
+        <div class="group-card">
+          <h3>Comunicação Visual</h3>
+          <ul>
+            <li>Fachadas e letreiros</li>
+            <li>Placas e adesivagem</li>
+            <li>Envelopamento</li>
+          </ul>
         </div>
       </div>
     </div>

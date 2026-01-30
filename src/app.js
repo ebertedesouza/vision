@@ -5,6 +5,8 @@ import { createServices } from './components/services.js';
 import { createPortfolio } from './components/portfolio.js';
 import { createContact } from './components/contact.js';
 import { createFooter } from './components/footer.js';
+import { initSmoothScroll } from './utils/helpers.js';
+import { createWhatsappFloat } from './utils/whatsappFloat.js';
 
 const app = document.getElementById('app');
 
@@ -15,3 +17,6 @@ app.appendChild(createServices());
 app.appendChild(createPortfolio());
 app.appendChild(createContact());
 app.appendChild(createFooter());
+
+initSmoothScroll();
+createWhatsappFloat();

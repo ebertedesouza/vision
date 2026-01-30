@@ -1,4 +1,4 @@
-/* ===================== Reset / Base ===================== */
+/* ===================== Reset ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +10,11 @@ body {
   background-color: #163A5E;
   color: #FFFFFF;
   scroll-behavior: smooth;
+  padding-top: 80px;
 }
 
 a {
   text-decoration: none;
-  color: #3E77AA;
 }
 
 ul {
@@ -27,45 +27,46 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(22, 58, 94, 0.6);
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 12px 32px;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .site-header .logo img {
-  height: 100px;
-  width: 250px;
-  object-fit: contain;
+  height: 48px;
+  width: auto;
 }
 
 .site-header .nav ul {
   display: flex;
-  gap: 25px;
+  gap: 28px;
 }
 
 .site-header .nav ul li a {
-  font-weight: bold;
-  color: #FFFFFF; /* letras pretas */
+  color: #000000;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .site-header .nav ul li a:hover {
-  color: #3E77AA; /* azul destaque ao passar o mouse */
+  color: #3E77AA;
 }
 
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
+  color: #000;
 }
 
 /* ===================== Hero ===================== */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 80px);
+  background: url('../img/banner.jpg') no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,240 +77,217 @@ ul {
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(22, 58, 94, 0.6);
+  inset: 0;
+  background: rgba(22, 58, 94, 0.65);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 820px;
   padding: 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2.6rem;
+  margin-bottom: 16px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
+  line-height: 1.5;
 }
 
-/* ===================== Botão Principal ===================== */
+/* ===================== Botão ===================== */
 .btn-principal {
-  background-color: #FFFFFF; /* botão branco */
-  color: #163A5E;            /* texto azul marinho */
-  padding: 12px 25px;
-  border: 2px solid #3E77AA; /* contorno azul destaque */
+  background-color: #FFFFFF;
+  color: #163A5E;
+  padding: 14px 28px;
   border-radius: 6px;
   font-weight: bold;
+  border: none;
   transition: all 0.3s ease;
 }
 
 .btn-principal:hover {
   background-color: #3E77AA;
   color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+}
+
+/* ===================== Seções ===================== */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ===================== About ===================== */
 .about {
   background-color: #163A5E;
-  color: #FFFFFF;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
 }
 
 .about p {
-  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
   line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 /* ===================== Services ===================== */
 .services {
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   color: #163A5E;
-  padding: 80px 20px;
-  text-align: center;
 }
 
-.services .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.services h2 {
-  font-size: 2rem;
+.section-subtitle {
+  margin-top: 10px;
   margin-bottom: 40px;
+  color: #163A5E;
+  font-size: 1.05rem;
 }
 
-.service-cards {
+.service-groups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.group-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(22, 58, 94, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.group-card h3 {
+  color: #163A5E;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+}
+
+.group-card ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.card {
-  background-color: #3E77AA;
-  color: #FFFFFF;
-  padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+.group-card li {
+  color: #163A5E;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.4;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.5;
+.group-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3E77AA;
 }
 
 /* ===================== Portfolio ===================== */
-.portfolio {
-  background-color: #163A5E;
-  color: #FFFFFF;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.portfolio .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.portfolio h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
 .portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
 .portfolio-gallery img {
   width: 100%;
   border-radius: 8px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-gallery img:hover {
-  transform: scale(1.05);
 }
 
 /* ===================== Contact ===================== */
 .contact {
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   color: #163A5E;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.contact .container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.contact-info p {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #163A5E;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.contact-form button {
-  width: fit-content;
-  margin: 0 auto;
 }
 
 /* ===================== Footer ===================== */
 .site-footer {
-  background-color: #163A5E;
+  background: #0F2C47;
   color: #FFFFFF;
-  padding: 40px 20px;
+  padding: 40px 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-brand p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.footer-links a {
+  margin-left: 20px;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.15);
   text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
-.site-footer .social-links {
-  margin-top: 15px;
-}
-
-.site-footer .social-links a {
-  margin: 0 10px;
-  color: #3E77AA;
-  font-weight: bold;
+/* ===================== WhatsApp Floating Button ===================== */
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2000;
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 12px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* ===================== Responsivo ===================== */
+@media (max-width: 1024px) {
+  .service-groups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .site-header .nav ul {
-    flex-direction: column;
-    background-color: #FFFFFF;
     position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
+    top: 80px;
+    right: 20px;
+    background: #FFFFFF;
+    flex-direction: column;
     padding: 20px;
+    border-radius: 10px;
     display: none;
-    border-radius: 8px;
   }
 
-  .site-header .nav.active {
+  .site-header .nav.active ul {
     display: flex;
   }
 
@@ -317,8 +295,18 @@ ul {
     display: block;
   }
 
-  .service-cards {
+  .footer-content {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-groups {
+    grid-template-columns: 1fr;
   }
 }
