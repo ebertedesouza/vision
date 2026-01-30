@@ -11,19 +11,10 @@ export function createFooter() {
         <strong>Vision Manutenção e Instalações</strong>
         <p>Soluções completas em manutenção, instalações e reformas.</p>
       </div>
-
-      <div class="footer-links">
-        <a href="https://wa.me/${whatsapp}" target="_blank" rel="noopener noreferrer">
-          WhatsApp
-        </a>
-        <a href="https://instagram.com/${instagram}" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-      </div>
     </div>
 
     <div class="footer-bottom">
-      © ${new Date().getFullYear()} Vision Manutenção e Instalações · São Paulo - SP
+      © ${new Date().getFullYear()} Vision Manutenção e Instalações
     </div>
   `;
 

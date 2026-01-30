@@ -8,8 +8,6 @@ export function createHero() {
 
   section.innerHTML = `
     <div class="hero-content">
-      <h1>Vision Manutenção e Instalações</h1>
-      <p>Manutenção civil, hidráulica, elétrica e serralheria com agilidade e garantia em São Paulo e Região Metropolitana.</p>
       <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-principal">
         Chamar no WhatsApp
       </a>
