@@ -112,7 +112,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(22, 58, 94, 0.35);
+  background: rgba(22, 58, 94, 0.25);
 }
 
 .hero-content {
@@ -123,9 +123,13 @@ section {
   margin-top: 140px;
 }
 
+/* Botão do HERO mais embaixo sem quebrar outros botões */
+.hero .btn-principal {
+  margin-top: 140px;
+}
+
 /* ===================== Botão ===================== */
 .btn-principal {
-  margin-top: 200px;
   display: inline-block;
 
   background-color: var(--white);
@@ -180,13 +184,13 @@ section {
   font-size: 2rem;
   margin-bottom: 8px;
 }
+
 .section-subtitle {
   margin-bottom: 40px;
   font-size: 1.05rem;
   color: #163A5E;
   opacity: 0.85;
 }
-
 
 .service-groups {
   display: grid;
@@ -270,7 +274,6 @@ section {
   padding: 0 20px;
 }
 
-/* Título e descrição */
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -283,7 +286,6 @@ section {
   color: #333;
 }
 
-/* ===================== Cards ===================== */
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(260px, 1fr));
@@ -292,7 +294,6 @@ section {
   margin: 0 auto;
 }
 
-/* Card base */
 .contact-card {
   background: #F3F6FA;
   border-radius: 18px;
@@ -307,43 +308,30 @@ section {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* Hover */
 .contact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
   border-color: rgba(62, 119, 170, 0.6);
 }
 
-/* Título do card (WhatsApp / Instagram) */
 .contact-card-title {
   font-size: 1.25rem;
   font-weight: 800;
   color: #133b67;
 }
 
-/* Valor principal */
 .contact-card-value {
   font-size: 1.1rem;
   font-weight: 600;
   color: #163A5E;
 }
 
-/* Ação */
 .contact-card-action {
   margin-top: 6px;
   font-size: 0.95rem;
   font-weight: 700;
   color: #3E77AA;
 }
-
-/* ===================== Responsivo ===================== */
-@media (max-width: 768px) {
-  .contact-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-
 
 /* ===================== Footer ===================== */
 .site-footer {
@@ -386,12 +374,6 @@ section {
   }
 }
 
-@media (max-width: 900px) {
-  .contact .container {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -430,22 +412,27 @@ section {
     display: flex;
   }
 
-  .hero h1 {
-    font-size: 2.1rem;
+  /* Hero no mobile: imagem inteira */
+  .hero {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: var(--navy);
+    min-height: 85vh;
   }
 
-  .hero p {
-    font-size: 1.05rem;
+  /* Botão mais baixo no mobile */
+  .hero-content {
+    margin-top: 0;
+    padding-top: 220px;
   }
 
-  .contact-form {
+  .hero .btn-principal {
+    margin-top: 0;
+  }
+
+  .contact-cards {
     grid-template-columns: 1fr;
-  }
-
-  .contact-form .btn-principal {
-    width: 100%;
-    justify-self: stretch;
-    text-align: center;
   }
 }
 
