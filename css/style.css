@@ -24,6 +24,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--navy);
   color: var(--white);
+  overflow-x: hidden;
 }
 
 a {
@@ -91,13 +92,24 @@ section {
 /* ===================== Hero / Banner ===================== */
 .hero {
   margin-top: var(--header-h);
+
+  /* FIX DEFINITIVO DO MOBILE */
+  min-height: calc(100svh - var(--header-h));
   min-height: calc(100vh - var(--header-h));
-  background: url("../img/banner.jpg") no-repeat center / cover;
+
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--navy);
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+
   position: relative;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -132,13 +144,17 @@ section {
   transform: translateY(-2px);
 }
 
-/* ===================== Hero Mobile (AJUSTADO) ===================== */
+/* ===================== Hero Mobile ===================== */
 @media (max-width: 768px) {
   .hero {
     background-image: url("../img/banner-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position:  center;
-    background-size: cover; 
+    background-size: cover;
+
+    background-position: 100%;
+  }
+
+  .hero::after {
+    background: rgba(22, 58, 94, 0.12);
   }
 
   .hero-content {
