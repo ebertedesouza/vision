@@ -132,17 +132,17 @@ section {
   transform: translateY(-2px);
 }
 
-/* ===================== Hero Mobile ===================== */
+/* ===================== Hero Mobile (AJUSTADO) ===================== */
 @media (max-width: 768px) {
   .hero {
     background-image: url("../img/banner-mobile.jpg");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position:  center;
+    background-size: 100%; 
   }
 
   .hero::after {
-    background: rgba(22, 58, 94, 0.15);
+    background: rgba(22, 58, 94, 0.1);
   }
 
   .hero-content {
@@ -314,7 +314,7 @@ section {
   z-index: 2000;
 }
 
-/* ===================== Responsivo ===================== */
+/* ===================== Responsivo Geral ===================== */
 @media (max-width: 1024px) {
   .service-groups {
     grid-template-columns: repeat(2, 1fr);
