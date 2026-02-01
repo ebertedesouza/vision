@@ -141,10 +141,6 @@ section {
     background-size: 100%; 
   }
 
-  .hero::after {
-    background: rgba(22, 58, 94, 0.1);
-  }
-
   .hero-content {
     position: absolute;
     left: 50%;
