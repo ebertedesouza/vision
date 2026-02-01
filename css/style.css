@@ -92,14 +92,11 @@ section {
 .hero {
   margin-top: var(--header-h);
   min-height: calc(100vh - var(--header-h));
-
-  background: url("../img/banner.jpg") no-repeat center/cover;
-
+  background: url("../img/banner.jpg") no-repeat center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   position: relative;
 }
 
@@ -114,64 +111,7 @@ section {
   position: relative;
   z-index: 1;
   padding: 20px;
-  margin-top: 140px;
-}
-
-/* ===== HERO MOBILE  ===== */
-@media (max-width: 768px) {
-  .hero {
-    background-image: url("../img/banner-mobile.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-
-  .hero-content {
-    position: absolute;
-    left: 50%;
-    bottom: 110px;
-    transform: translateX(-50%);
-    margin-top: 0;
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .btn-principal {
-    width: 100%;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-header .nav ul {
-    display: none;
-    position: absolute;
-    top: var(--header-h);
-    right: 16px;
-    background: var(--white);
-    padding: 18px;
-    border-radius: 14px;
-  }
-
-  .site-header .nav.active ul {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .site-header .nav ul li a {
-    color: var(--navy);
-  }
-
-  .contact-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .service-groups {
-    grid-template-columns: 1fr;
-  }
+  margin-top: 250px;
 }
 
 /* ===================== Botão ===================== */
@@ -190,6 +130,35 @@ section {
   background: var(--blue);
   color: var(--white);
   transform: translateY(-2px);
+}
+
+/* ===================== Hero Mobile ===================== */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("../img/banner-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero::after {
+    background: rgba(22, 58, 94, 0.15);
+  }
+
+  .hero-content {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    margin-top: 0;
+    width: 100%;
+    max-width: 340px;
+    padding: 0 16px;
+  }
+
+  .btn-principal {
+    width: 100%;
+  }
 }
 
 /* ===================== About ===================== */
@@ -278,14 +247,23 @@ section {
 
 .portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 .portfolio-gallery img {
   width: 100%;
-  border-radius: 14px;
+  height: 260px;
   object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35);
 }
 
 /* ===================== Contact ===================== */
@@ -343,4 +321,42 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
+  .site-header .nav ul {
+    display: none;
+    position: absolute;
+    top: var(--header-h);
+    right: 16px;
+    background: var(--white);
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .site-header .nav.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .site-header .nav ul li a {
+    color: var(--navy);
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-gallery img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-groups {
+    grid-template-columns: 1fr;
+  }
+}
