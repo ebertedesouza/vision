@@ -165,13 +165,15 @@ section {
 /* ===================== About ===================== */
 .about {
   padding: 80px 0;
-  text-align: center;
+  text-align: justify;
 }
 
 .about h2 {
   font-size: 2rem;
   margin-bottom: 18px;
+  text-align: center;
 }
+
 
 .about p {
   max-width: 900px;

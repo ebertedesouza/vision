@@ -7,7 +7,7 @@ export function createAbout() {
     <div class="container">
       <h2>Sobre a Vision</h2>
       <p>
-        A <strong>A Vision Manutenção e Instalações nasceu para oferecer soluções integradas em construção, manutenção e acabamentos. Nosso compromisso é unir qualidade, agilidade e custo-benefício em cada projeto, seja residencial, comercial ou industrial.
+       <strong>A Vision Manutenção e Instalações nasceu para oferecer soluções integradas em construção, manutenção e acabamentos. Nosso compromisso é unir qualidade, agilidade e custo-benefício em cada projeto residencial, comercial ou industrial.
       </p>
     </div>
   `;
