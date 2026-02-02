@@ -268,11 +268,24 @@ section {
 }
 
 /* ===================== Contact ===================== */
+
+
 .contact {
   background: #FFFFFF;
   color: #163A5E;
   padding: 80px 0;
   text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.contact-subtitle {
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+  opacity: 0.85;
 }
 
 .contact p {
@@ -302,6 +315,13 @@ section {
   padding: 40px 20px;
   text-align: center;
 }
+
+.site-footer p  {
+  background: #0F2C47;
+  padding: 10px 20px;
+  text-align: center;
+}
+
 
 /* ===================== WhatsApp Floating ===================== */
 .whatsapp-float {

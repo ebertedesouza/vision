@@ -8,14 +8,11 @@ export function createFooter() {
   footer.innerHTML = `
     <div class="container footer-content">
       <div class="footer-brand">
-        <strong>Vision Manutenção e Instalações</strong>
-        <p>Soluções completas em manutenção, instalações e reformas.</p>
+        <strong>Vision Manutenção e Instalações.</strong>
+        <p>Eficiência e soluções que transformam.</p>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      © ${new Date().getFullYear()} Vision Manutenção e Instalações
-    </div>
   `;
 
   return footer;

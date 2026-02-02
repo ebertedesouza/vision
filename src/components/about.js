@@ -7,7 +7,7 @@ export function createAbout() {
     <div class="container">
       <h2>Sobre a Vision</h2>
       <p>
-        A <strong>Vision Coberturas e Manutenções</strong>, liderada por Edvaldo e sua equipe especializada, atua em serviços de <strong>manutenção civil, hidráulica e serralheria</strong>, oferecendo soluções rápidas e eficientes para residências, comércios e indústrias.
+        A <strong>A Vision Manutenção e Instalações nasceu para oferecer soluções integradas em construção, manutenção e acabamentos. Nosso compromisso é unir qualidade, agilidade e custo-benefício em cada projeto, seja residencial, comercial ou industrial.
       </p>
     </div>
   `;
