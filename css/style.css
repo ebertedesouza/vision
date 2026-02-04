@@ -12,7 +12,7 @@
   --white: #FFFFFF;
   --bg-soft: #F3F6FA;
   --text-dark: #0E2238;
-  --header-h: 100px;
+  --header-h: 64px;
 }
 
 /* ===================== Base ===================== */
@@ -46,16 +46,12 @@ section {
 }
 
 /* ===================== Header ===================== */
-:root {
-  --header-h: 64px;
-}
-
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 64px;
+  height: var(--header-h);
   z-index: 1000;
 
   display: flex;
@@ -83,7 +79,7 @@ section {
 .site-header .nav ul li a {
   font-weight: 700;
   opacity: 0.95;
-  line-height: 64px;
+  line-height: var(--header-h);
   display: inline-block;
 }
 
@@ -97,7 +93,6 @@ section {
   cursor: pointer;
 }
 
-
 /* ===================== Hero / Banner ===================== */
 .hero {
   min-height: 100vh;
@@ -109,7 +104,6 @@ section {
   text-align: center;
   position: relative;
 }
-
 
 .hero::after {
   content: "";
@@ -145,7 +139,7 @@ section {
 /* ===================== Hero Mobile (CORRIGIDO) ===================== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh; 
+    min-height: 70vh;
     background-image: url("../img/banner-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -184,12 +178,19 @@ section {
   text-align: center;
 }
 
-
 .about p {
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.8;
   opacity: 0.95;
+
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-align-last: left;
 }
 
 /* ===================== Services ===================== */
@@ -280,8 +281,6 @@ section {
 }
 
 /* ===================== Contact ===================== */
-
-
 .contact {
   background: #FFFFFF;
   color: #163A5E;
@@ -334,7 +333,6 @@ section {
   text-align: center;
 }
 
-
 /* ===================== WhatsApp Floating ===================== */
 .whatsapp-float {
   position: fixed;
@@ -356,27 +354,60 @@ section {
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    background: rgba(22, 58, 94, 0.95);
+    color: var(--white);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .site-header .nav {
+    position: absolute;
+    top: var(--header-h);
+    right: 16px;
+    width: min(280px, 92vw);
   }
 
   .site-header .nav ul {
     display: none;
-    position: absolute;
-    top: var(--header-h);
-    right: 16px;
-    background: var(--white);
-    padding: 18px;
+    flex-direction: column;
+    gap: 12px;
+
+    background: rgba(22, 58, 94, 0.98);
+    padding: 14px;
     border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.30);
   }
 
   .site-header .nav.active ul {
     display: flex;
-    flex-direction: column;
-    gap: 14px;
   }
 
   .site-header .nav ul li a {
-    color: var(--navy);
+    color: var(--white);
+    line-height: normal;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    opacity: 0.98;
+  }
+
+  .site-header .nav ul li a:hover {
+    background: rgba(255,255,255,0.08);
+    opacity: 1;
   }
 
   .contact-cards {
@@ -385,6 +416,16 @@ section {
 
   .portfolio-gallery img {
     height: 200px;
+  }
+
+  .about p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    text-align-last: left;
+    word-spacing: normal;
   }
 }
 
