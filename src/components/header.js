@@ -3,9 +3,6 @@ export function createHeader() {
   header.classList.add('site-header');
 
   header.innerHTML = `
-    <div class="logo">
-      <img src="img/logo.png" alt="Vision Logo">
-    </div>
     <nav class="nav">
       <ul>
         <li><a href="#hero">Início</a></li>

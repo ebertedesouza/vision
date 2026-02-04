@@ -46,36 +46,45 @@ section {
 }
 
 /* ===================== Header ===================== */
+:root {
+  --header-h: 64px;
+}
+
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--header-h);
+  height: 64px;
   z-index: 1000;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
+  padding: 0 24px;
 
   background: rgba(22, 58, 94, 0.25);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .site-header .logo img {
-  height: 64px;
+  height: 40px;
+  display: block;
 }
 
 .site-header .nav ul {
   display: flex;
-  gap: 28px;
+  gap: 24px;
+  align-items: center;
+  height: 100%;
 }
 
 .site-header .nav ul li a {
   font-weight: 700;
   opacity: 0.95;
+  line-height: 64px;
+  display: inline-block;
 }
 
 .site-header .nav ul li a:hover {
@@ -88,11 +97,12 @@ section {
   cursor: pointer;
 }
 
+
 /* ===================== Hero / Banner ===================== */
 .hero {
-  margin-top: var(--header-h);
-  min-height: calc(100vh - var(--header-h));
-  background: url("../img/banner.jpg") no-repeat center / cover;
+  min-height: 100vh;
+  padding-top: var(--header-h);
+  background: url("../img/banner.jpg") no-repeat center top / cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,11 +110,11 @@ section {
   position: relative;
 }
 
+
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(22, 58, 94, 0.25);
 }
 
 .hero-content {
