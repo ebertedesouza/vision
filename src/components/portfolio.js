@@ -16,6 +16,10 @@ export function createPortfolio() {
     '/img/portfolio/hidraulica-1.jpg',
     '/img/portfolio/hidraulica-2.jpg',
     '/img/portfolio/hidraulica-3.jpg',
+    '/img/portfolio/eletrica-04.jpg',
+    '/img/portfolio/eletrica-05.jpg',
+    '/img/portfolio/eletrica-06.jpg',
+    '/img/portfolio/eletrica-07.jpg',
   ];
 
   section.innerHTML = `
